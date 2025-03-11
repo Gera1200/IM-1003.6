@@ -139,46 +139,93 @@ nav ul li:hover {
     color: #555;
 }
 
-.experiencia-lista, .formacion-lista {
-    margin-top: 20px;
+.contenido-sobre-mi, .contenido-objetivo {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.8;
 }
 
-button {
+.foto-perro {
     display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.foto-perro:hover {
+    transform: scale(1.05);
+}
+
+.experiencia-lista, .formacion-lista {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.boton-experiencia {
+    width: 100%;
+    padding: 15px;
     margin: 10px 0;
-    padding: 10px;
     background: #007BFF;
     color: white;
     border: none;
+    border-radius: 10px;
+    text-align: left;
     cursor: pointer;
     transition: background 0.3s, transform 0.3s;
-    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-button:hover {
+.boton-experiencia:hover {
     background: #0056b3;
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
-.info {
-    display: none;
-    padding: 10px;
-    background: #eee;
-    margin-top: 5px;
-    opacity: 0;
-    transform: scale(0.9);
-    transition: all 0.3s ease-in-out;
+.info-experiencia {
+    padding: 15px;
+    background: #f9f9f9;
+    border-left: 5px solid #007BFF;
+    margin: 10px 0;
     border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none; /* Oculto por defecto */
+    max-height: 300px; /* Altura máxima */
+    overflow-y: auto; /* Scroll interno si el contenido es muy largo */
 }
 
-.info.mostrar {
-    display: block;
-    opacity: 1;
-    transform: scale(1);
+.info-experiencia.mostrar {
+    display: block; /* Mostrar cuando se active */
 }
 
-.oculto {
-    display: none;
+.empresa {
+    font-size: 1em;
+    font-weight: bold;
+    color: #007BFF;
+    margin-bottom: 5px;
+}
+
+.fecha {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.funciones {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.funciones li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #333;
 }
 
 .habilidades-lista {
@@ -317,118 +364,5 @@ footer {
 
     footer {
         padding: 10px;
-    }
-    .contenido-sobre-mi {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: justify;
-    line-height: 1.8;
-}
-
-.foto-perro {
-    display: block;
-    margin: 20px auto;
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.foto-perro:hover {
-    transform: scale(1.05);
-}
-    .contenido-objetivo {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: justify;
-    line-height: 1.8;
-}
-
-.contenido-objetivo p {
-    margin-bottom: 20px;
-}
-/* Ajustes generales para el desplazamiento */
-main {
-    padding-bottom: 100px; /* Espacio para el footer */
-}
-
-/* Estilos para la sección de Experiencia Profesional */
-.experiencia-lista {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.boton-experiencia {
-    width: 100%;
-    padding: 15px;
-    margin: 10px 0;
-    background: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    text-align: left;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
-    font-size: 1.1em;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.boton-experiencia:hover {
-    background: #0056b3;
-    transform: translateY(-3px);
-}
-
-.info-experiencia {
-    padding: 15px;
-    background: #f9f9f9;
-    border-left: 5px solid #007BFF;
-    margin: 10px 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: none; /* Oculto por defecto */
-    max-height: 300px; /* Altura máxima */
-    overflow-y: auto; /* Scroll interno si el contenido es muy largo */
-}
-
-.info-experiencia.mostrar {
-    display: block; /* Mostrar cuando se active */
-}
-
-.empresa {
-    font-size: 1em;
-    font-weight: bold;
-    color: #007BFF;
-    margin-bottom: 5px;
-}
-
-.fecha {
-    font-size: 0.9em;
-    color: #777;
-    margin-bottom: 10px;
-}
-
-.funciones {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin: 0;
-}
-
-.funciones li {
-    margin-bottom: 10px;
-    line-height: 1.6;
-    color: #333;
-}
-
-/* Estilos específicos para laptops */
-@media (min-width: 768px) {
-    .boton-experiencia {
-        font-size: 1.2em; /* Tamaño de fuente más grande en laptops */
-    }
-
-    .info-experiencia {
-        max-height: 400px; /* Altura máxima mayor en laptops */
     }
 }
